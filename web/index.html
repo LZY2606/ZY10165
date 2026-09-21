@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>脉钟签证</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>脉钟签证</h1>
+      <p class="subtitle">
+        脉冲星计时 · 跨长观测空档整数周模糊 · 右连续时钟跳变 · 双假设分支保留与逐点比较
+      </p>
+      <div class="toolbar">
+        <label>
+          输入版本
+          <select id="version-select"></select>
+        </label>
+        <button id="btn-refit" type="button">重新拟合全部分支</button>
+        <button id="btn-export" type="button">导出运行记录</button>
+        <button id="btn-import" type="button">导入并重放</button>
+        <button id="btn-reset" type="button" class="danger">重置为种子状态</button>
+        <input id="import-file" type="file" accept="application/json" hidden />
+      </div>
+      <div id="ident-banner" class="banner hidden"></div>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>到达时刻与包裹相位</h2>
+        <div class="table-wrap">
+          <table id="toa-table">
+            <thead>
+              <tr>
+                <th>望次</th>
+                <th>编号</th>
+                <th>到达时刻 t (ns, 台钟)</th>
+                <th>频段 (MHz)</th>
+                <th>整数周 N（固化）</th>
+                <th>包裹相位 w</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <canvas id="phase-canvas" width="980" height="260"></canvas>
+      </section>
+
+      <section class="card">
+        <h2>假设分支</h2>
+        <div class="branch-controls">
+          <button id="btn-branch" type="button">从当前分支克隆新分支</button>
+          <span class="hint">分支保留各自参数、残差摘要、整周偏移、时钟事件、排除集合与输入版本哈希。</span>
+        </div>
+        <div id="branches" class="branches"></div>
+      </section>
+
+      <section class="card">
+        <h2>逐点比较</h2>
+        <div class="compare-controls">
+          <label>分支 A <select id="compare-a"></select></label>
+          <label>分支 B <select id="compare-b"></select></label>
+          <button id="btn-compare" type="button">按观测点比较</button>
+        </div>
+        <canvas id="residual-canvas" width="980" height="280"></canvas>
+        <div class="table-wrap">
+          <table id="compare-table">
+            <thead>
+              <tr>
+                <th>编号</th>
+                <th>望次</th>
+                <th>频段</th>
+                <th>A 整周</th>
+                <th>B 整周</th>
+                <th>A 残差 (µs)</th>
+                <th>B 残差 (µs)</th>
+                <th>Δ 残差 (µs)</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>运行日志（事件溯源，可重放）</h2>
+        <div id="op-log" class="op-log"></div>
+      </section>
+    </main>
+
+    <footer>
+      <span>整数周一律以 BigInt 存储；展开相位不使用浮点取模反推。</span>
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

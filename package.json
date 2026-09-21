@@ -1,0 +1,33 @@
+{
+  "name": "pulse-clock-visa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "脉钟签证 — 脉冲星计时整数周模糊、时钟跳变与假设分支管理",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsx src/server/main.ts",
+    "start": "tsx src/server/main.ts",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "esbuild": "^0.25.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^22.15.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "esbuild"
+    ]
+  }
+}

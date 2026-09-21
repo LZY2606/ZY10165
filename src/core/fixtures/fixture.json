@@ -1,0 +1,160 @@
+{
+  "format": "pulse-clock-visa-fixture",
+  "fixtureVersion": 1,
+  "spec": {
+    "tRefNs": "1000000000000000000",
+    "f0NominalHz": 100,
+    "f1TrueHzS": 0,
+    "dmTrue": 100,
+    "phase0Cycles": 0.1,
+    "gapS": 2592000,
+    "endpointOffsetS": 1000
+  },
+  "gaps": [
+    {
+      "index": 0,
+      "afterSession": "A",
+      "beforeSession": "B"
+    },
+    {
+      "index": 1,
+      "afterSession": "B",
+      "beforeSession": "C"
+    }
+  ],
+  "versions": [
+    {
+      "versionId": "v1-baseline",
+      "label": "回退末端望次 C（两方案并列）",
+      "toas": [
+        {
+          "code": "A1-1400",
+          "session": "A",
+          "ordinal": 0,
+          "tNs": "1000000000000000000",
+          "freqMhz": 1400,
+          "nCycles": "0",
+          "wrapped": 0.1,
+          "sigmaS": 0.000001,
+          "versionId": "v1-baseline"
+        },
+        {
+          "code": "A2-800",
+          "session": "A",
+          "ordinal": 1,
+          "tNs": "1000000000000000000",
+          "freqMhz": 800,
+          "nCycles": "0",
+          "wrapped": 0.056342262755,
+          "sigmaS": 0.000001,
+          "versionId": "v1-baseline"
+        },
+        {
+          "code": "A3-400",
+          "session": "A",
+          "ordinal": 2,
+          "tNs": "1000000000000000000",
+          "freqMhz": 400,
+          "nCycles": "-1",
+          "wrapped": 0.861866887755,
+          "sigmaS": 0.000001,
+          "versionId": "v1-baseline"
+        },
+        {
+          "code": "A4-1400",
+          "session": "A",
+          "ordinal": 3,
+          "tNs": "1000000600000000000",
+          "freqMhz": 1400,
+          "nCycles": "60000",
+          "wrapped": 0.099999999999,
+          "sigmaS": 0.000001,
+          "versionId": "v1-baseline"
+        },
+        {
+          "code": "B1-1400",
+          "session": "B",
+          "ordinal": 0,
+          "tNs": "1002592000000000000",
+          "freqMhz": 1400,
+          "nCycles": "259200000",
+          "wrapped": 0.09999999404,
+          "sigmaS": 0.000001,
+          "versionId": "v1-baseline"
+        }
+      ]
+    },
+    {
+      "versionId": "v2-with-endpoint",
+      "label": "含末端望次 C（可区分）",
+      "toas": [
+        {
+          "code": "A1-1400",
+          "session": "A",
+          "ordinal": 0,
+          "tNs": "1000000000000000000",
+          "freqMhz": 1400,
+          "nCycles": "0",
+          "wrapped": 0.1,
+          "sigmaS": 0.000001,
+          "versionId": "v2-with-endpoint"
+        },
+        {
+          "code": "A2-800",
+          "session": "A",
+          "ordinal": 1,
+          "tNs": "1000000000000000000",
+          "freqMhz": 800,
+          "nCycles": "0",
+          "wrapped": 0.056342262755,
+          "sigmaS": 0.000001,
+          "versionId": "v2-with-endpoint"
+        },
+        {
+          "code": "A3-400",
+          "session": "A",
+          "ordinal": 2,
+          "tNs": "1000000000000000000",
+          "freqMhz": 400,
+          "nCycles": "-1",
+          "wrapped": 0.861866887755,
+          "sigmaS": 0.000001,
+          "versionId": "v2-with-endpoint"
+        },
+        {
+          "code": "A4-1400",
+          "session": "A",
+          "ordinal": 3,
+          "tNs": "1000000600000000000",
+          "freqMhz": 1400,
+          "nCycles": "60000",
+          "wrapped": 0.099999999999,
+          "sigmaS": 0.000001,
+          "versionId": "v2-with-endpoint"
+        },
+        {
+          "code": "B1-1400",
+          "session": "B",
+          "ordinal": 0,
+          "tNs": "1002592000000000000",
+          "freqMhz": 1400,
+          "nCycles": "259200000",
+          "wrapped": 0.09999999404,
+          "sigmaS": 0.000001,
+          "versionId": "v2-with-endpoint"
+        },
+        {
+          "code": "C1-1400",
+          "session": "C",
+          "ordinal": 0,
+          "tNs": "1002593000000000000",
+          "freqMhz": 1400,
+          "nCycles": "259300000",
+          "wrapped": 0.09999999404,
+          "sigmaS": 0.000001,
+          "versionId": "v2-with-endpoint"
+        }
+      ]
+    }
+  ]
+}
