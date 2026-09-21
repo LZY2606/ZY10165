@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>脉钟签证</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <h1>脉钟签证</h1>
+    <p class="sub">脉冲到达时刻 · 整周模糊假设分支 · 时钟事件 · 可识别性判定</p>
+  </header>
+
+  <section class="toolbar">
+    <button id="btn-import-full">导入完整 fixture</button>
+    <button id="btn-revert-tail">回退末端数据</button>
+    <button id="btn-export">导出运行记录</button>
+    <label class="file-label">重放导出包<input type="file" id="file-replay" accept=".json" /></label>
+    <button id="btn-reset" class="danger">清空数据库</button>
+    <span id="toast"></span>
+  </section>
+
+  <main>
+    <aside>
+      <section class="panel">
+        <h2>输入版本</h2>
+        <ul id="versions" class="list"></ul>
+      </section>
+      <section class="panel">
+        <h2>共同时钟事件</h2>
+        <ul id="clock-events" class="list"></ul>
+        <form id="form-clock" class="form">
+          <input name="tUs" placeholder="边界时刻 tUs（右连续）" required />
+          <input name="offsetUs" placeholder="跳变量 µs" required />
+          <input name="label" placeholder="标签" />
+          <button type="submit">添加时钟跳变</button>
+        </form>
+      </section>
+      <section class="panel">
+        <h2>假设分支</h2>
+        <ul id="branches" class="list"></ul>
+        <form id="form-branch" class="form">
+          <input name="name" placeholder="分支名，如 方案B(+1周)" required />
+          <select name="inputVersion"></select>
+          <select name="copyFrom"><option value="">空白参数（fixture 默认）</option></select>
+          <button type="submit">新建分支</button>
+        </form>
+      </section>
+    </aside>
+
+    <section class="content">
+      <section class="panel" id="branch-detail">
+        <h2>分支详情 <span id="detail-name"></span></h2>
+        <div id="detail-summary" class="summary"></div>
+        <div class="shift-bar">
+          <select id="gap-select"></select>
+          <button id="btn-shift-p1">空档后 +1 周</button>
+          <button id="btn-shift-m1">空档后 −1 周</button>
+          <ul id="shifts" class="inline-list"></ul>
+        </div>
+        <canvas id="canvas-resid" width="860" height="240"></canvas>
+        <canvas id="canvas-phase" width="860" height="160"></canvas>
+        <table id="toa-table">
+          <thead>
+            <tr>
+              <th>#</th><th>到达时刻 (MJD)</th><th>频段 (MHz)</th>
+              <th>残差 (µs)</th><th>包裹相位</th><th>整周编号</th>
+              <th>时钟事件</th><th>排除候选</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="panel" id="compare-panel">
+        <h2>分支对比</h2>
+        <div class="shift-bar">
+          <select id="compare-a"></select>
+          <select id="compare-b"></select>
+          <button id="btn-compare">按观测点对比</button>
+        </div>
+        <canvas id="canvas-compare" width="860" height="200"></canvas>
+        <table id="compare-table">
+          <thead>
+            <tr><th>#</th><th>到达时刻 (MJD)</th><th>频段</th>
+              <th>A 整周</th><th>A 残差 (µs)</th>
+              <th>B 整周</th><th>B 残差 (µs)</th><th>Δ (µs)</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+
+      <section class="panel">
+        <h2>运行记录</h2>
+        <ul id="run-log" class="list mono"></ul>
+      </section>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

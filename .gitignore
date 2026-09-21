@@ -34,3 +34,7 @@ coverage/
 .vite/
 .turbo/
 *.tsbuildinfo
+
+# 运行时数据与构建产物
+data/
+public/app.js

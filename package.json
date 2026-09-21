@@ -1,0 +1,21 @@
+{
+  "name": "pulse-clock-visa",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "脉钟签证 — 脉冲星计时整周模糊假设分支工具",
+  "scripts": {
+    "dev": "pnpm run build:client && tsx src/server/index.ts",
+    "build:client": "esbuild src/client/main.ts --bundle --outfile=public/app.js --format=esm --target=es2022",
+    "gen-fixture": "tsx src/core/genFixture.ts",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.25.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.1.0"
+  }
+}

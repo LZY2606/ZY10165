@@ -1,0 +1,248 @@
+{
+  "meta": {
+    "name": "default",
+    "t0Mjd": 59000,
+    "fHz": "10",
+    "fdotHzPerS": "-1e-15",
+    "dmPcCm3": "30",
+    "noiseSigmaUs": 2,
+    "seed": 1169,
+    "sessionDays": 30,
+    "tailStartDay": 230,
+    "tailCount": 5,
+    "bandsMHz": [
+      820,
+      1400,
+      2400
+    ]
+  },
+  "clockEvents": [
+    {
+      "tUs": "863999964036",
+      "offsetUs": "500",
+      "label": "maser-step@toa10"
+    },
+    {
+      "tUs": "1728000000000",
+      "offsetUs": "100",
+      "label": "clock-reset-a"
+    },
+    {
+      "tUs": "1728000000000",
+      "offsetUs": "-30",
+      "label": "clock-reset-b"
+    }
+  ],
+  "toas": [
+    {
+      "seq": 0,
+      "tUs": "185106",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 1,
+      "tUs": "86399963503",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 2,
+      "tUs": "172799921609",
+      "bandMHz": 2400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 3,
+      "tUs": "259200085106",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 4,
+      "tUs": "345599963508",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 5,
+      "tUs": "431999921619",
+      "bandMHz": 2400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 6,
+      "tUs": "518400085116",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 7,
+      "tUs": "604799963518",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 8,
+      "tUs": "691199921630",
+      "bandMHz": 2400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 9,
+      "tUs": "777600085132",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 10,
+      "tUs": "863999964036",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 11,
+      "tUs": "950399922153",
+      "bandMHz": 2400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 12,
+      "tUs": "1036800085661",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 13,
+      "tUs": "1123199964064",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 14,
+      "tUs": "1209599922178",
+      "bandMHz": 2400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 15,
+      "tUs": "1296000085692",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 16,
+      "tUs": "1382399964099",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 17,
+      "tUs": "1468799922220",
+      "bandMHz": 2400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 18,
+      "tUs": "1555200085723",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 19,
+      "tUs": "1641599964138",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 20,
+      "tUs": "1727999922255",
+      "bandMHz": 2400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 21,
+      "tUs": "1814400085839",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 22,
+      "tUs": "1900799964252",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 23,
+      "tUs": "1987199922374",
+      "bandMHz": 2400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 24,
+      "tUs": "2073600085887",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 25,
+      "tUs": "2159999964306",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 26,
+      "tUs": "2246399922434",
+      "bandMHz": 2400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 27,
+      "tUs": "2332800085949",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 28,
+      "tUs": "2419199964368",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 29,
+      "tUs": "2505599922496",
+      "bandMHz": 2400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 30,
+      "tUs": "19872000105422",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 31,
+      "tUs": "19958399983987",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 32,
+      "tUs": "20044799942268",
+      "bandMHz": 2400,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 33,
+      "tUs": "20131200105938",
+      "bandMHz": 820,
+      "observatory": "FAST"
+    },
+    {
+      "seq": 34,
+      "tUs": "20217599984512",
+      "bandMHz": 1400,
+      "observatory": "FAST"
+    }
+  ]
+}
